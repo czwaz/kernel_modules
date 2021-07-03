@@ -10,7 +10,7 @@ __init void ex02_function1 (void)
 
 void ex02_function2 (void)
 {
-	printk (KERN_INFO "Inside the %s fucntion\n", __FUNCTION__);
+	printk (KERN_INFO "Inside the %s function\n", __FUNCTION__);
 }
 
 __initdata int count = 5; // __initdata frees memory of this variable after init function has run
