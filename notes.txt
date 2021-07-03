@@ -1,0 +1,7 @@
+tail /var/log/syslog
+dmesg
+insmod, rmmod, lsmod
+
+make -C /lib/modules/$(uname -r)/build M=$PWD modules
+
+
