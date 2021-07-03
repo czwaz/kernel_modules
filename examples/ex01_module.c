@@ -1,6 +1,8 @@
 #include <linux/init.h>
 #include <linux/module.h>
 
+MODULE_LICENSE("GPL");
+
 int ex01_module_init (void)
 {
 	printk (KERN_ALERT "Inside the %s function\n", __FUNCTION__);
