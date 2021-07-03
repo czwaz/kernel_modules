@@ -4,4 +4,6 @@ insmod, rmmod, lsmod
 
 make -C /lib/modules/$(uname -r)/build M=$PWD modules
 
-
+load a module with parameters:
+	sudo insmod <module_name> <parameter_name>=<value>
+	e.g.: sudo insmod ex04_module.ko count=5
