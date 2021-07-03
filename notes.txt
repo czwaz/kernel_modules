@@ -5,5 +5,9 @@ insmod, rmmod, lsmod
 make -C /lib/modules/$(uname -r)/build M=$PWD modules
 
 load a module with parameters:
-	sudo insmod <module_name> <parameter_name>=<value>
-	e.g.: sudo insmod ex04_module.ko count=5
+  sudo insmod <module_name> <parameter_name>=<value>
+  e.g.: sudo insmod ex04_module.ko count=5
+
+character device drivers:
+  cat /proc/devices					list loaded char/block drivers (Major num.| Name)
+  sudo mknod -m 666 /dev/simple_char_device c 269 0	create character device

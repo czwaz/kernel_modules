@@ -6,3 +6,5 @@ obj-m := ex03_exporting_symbols.o
 obj-m += ex03_using_symbols.o
 
 obj-m := ex04_module_param.o
+
+obj-m := ex05_char_drv.o
