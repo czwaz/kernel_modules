@@ -12,13 +12,13 @@ int ex03_module_function (void)
 EXPORT_SYMBOL (ex03_module_function);
 
 
-int ex03_module_init (void)
+static int __init ex03_module_init (void)
 {
 	printk (KERN_INFO "Inside the %s function\n", __FUNCTION__);
 	return 0;
 }
 
-void ex03_module_exit (void)
+static void __exit ex03_module_exit (void)
 {
 	printk (KERN_INFO "Inside the %s function\n", __FUNCTION__);
 }

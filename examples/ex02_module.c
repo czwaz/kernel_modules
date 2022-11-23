@@ -15,7 +15,7 @@ void ex02_function2 (void)
 
 __initdata int count = 5; // __initdata frees memory of this variable after init function has run
 
-__init int ex02_module_init (void) // __init frees up the memory needed for this function after the module is initialized
+static __init int ex02_module_init (void) // __init frees up the memory needed for this function after the module is initialized
 {
 	int index = 0;
 	
@@ -31,10 +31,11 @@ __init int ex02_module_init (void) // __init frees up the memory needed for this
 	return 0;
 }
 
-void ex02_module_exit (void)
+static void __exit ex02_module_exit (void)
 {
 	printk (KERN_INFO "Inside the %s function\n", __FUNCTION__);
 
+	// ex02_function1 (); not allowed as this function is marked __init!!!
 	ex02_function2 ();
 }
 

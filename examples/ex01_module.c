@@ -3,13 +3,13 @@
 
 MODULE_LICENSE("GPL");
 
-int ex01_module_init (void)
+static int __init ex01_module_init (void)
 {
 	printk (KERN_INFO "Inside the %s function\n", __FUNCTION__);
 	return 0;
 }
 
-void ex01_module_exit (void)
+static void __exit ex01_module_exit (void)
 {
 	printk (KERN_INFO "Inside the %s function\n", __FUNCTION__);
 }
